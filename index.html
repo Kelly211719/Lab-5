@@ -1,0 +1,211 @@
+<html>
+<head>
+<title> Lab 5 </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage lay1;
+PImage lay2;
+PImage lay3;
+
+void setup()
+{
+	size( 500, 700 );
+	frameRate( 30 );
+	lay1 = loadImage("Images/lay1.gif");
+	lay2 = loadImage("Images/lay2.gif");
+	lay3 = loadImage("Images/lay3.png");
+
+}
+
+
+void draw()
+{
+
+	background(208,208,208);
+
+	background(255,255,255);
+
+	
+	//items
+	image(lay1,40,25+10,170,200);
+	image(lay2,230,20+10,170,200);
+	image(lay3,45,300-38,160,200);
+	
+	
+	//vending machine
+	stroke(0,0,0);
+	strokeWeight(50);
+	fill(0,0,0);
+	rect(5,0,5,700);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	rect(0,0,500,0);
+
+	stroke(0,0,0);
+	strokeWeight(10);
+	fill(0,0,0);
+	rect(400,0,380+20,700);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	rect(5,500,5+650,500);
+
+	stroke(255,255,255);
+	fill(255,255,255);
+	rect(450-30,300-20,60,100);
+
+	stroke(0,0,0);
+	strokeWeight(2);
+	fill(27,71,138);
+	rect(440-17,300-18,50+5,30);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	rect(440-17,300+20,15,8);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	rect(440-17,300+35,15,8);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	rect(440-17,300+50,15,8);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	rect(470-27,300+20,15,8);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	rect(470-27,300+35,15,8);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	rect(470-27,300+50,15,8);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	rect(470-27,300+65,15,8);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	rect(450+13,300+20,15,8);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	rect(450+13,300+35,15,8);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	rect(450+13,300+50,15,8);
+
+	//price tag
+
+	stroke(0,0,0);
+	strokeWeight(2);
+	fill(255,255,255);
+	rect(170-50,210+20,50,20);
+
+	fill(0,0,0);
+	textSize(12);
+	text("A1",100-10,245);
+
+	fill(0,0,0);
+	text("$6",120+15,250-5);
+
+	stroke(0,0,0);
+	strokeWeight(2);
+	fill(255,255,255);
+	rect(170+135,210+20,50,20);
+
+	fill(0,0,0);
+	textSize(12);
+	text("A2",280-10,245);
+
+	fill(0,0,0);
+	text("$6",300+20,245);
+
+	stroke(0,0,0);
+	strokeWeight(2);
+	fill(255,255,255);
+	rect(170-50,210+260,50,20);
+
+	fill(0,0,0);
+	textSize(12);
+	text("B1",90,485);
+
+	fill(0,0,0);
+	text("$6",120+15,430+55);
+	
+	
+
+	//actions
+	
+
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if(mouseX > 440-17 && mouseX < 440 &&
+			mouseY >320 && mouseY < 330)
+		{ 
+
+			fill(255,255,0);
+
+			fill(255,0,0);
+
+			textSize(25);
+			text("A1",440-3,300+10);
+		
+			image(lay1,200,490,160,200);
+		
+		}
+	}
+	
+
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if(mouseX > 470-23 && mouseX < 447+13 &&
+			mouseY > 335 && mouseY < 340)
+		{
+
+			fill(255,255,0);
+
+			fill(255,0,0);
+
+			textSize(25);
+			text("A2",440-3,300+10);
+		
+			image(lay2,200,490,160,200);
+		}
+	}
+
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if(mouseX > 440+25 && mouseX <463+17 &&
+			mouseY > 350 &&  mouseY < 358)
+		{
+
+			fill(255,255,0);
+
+			fill(255,0,0);
+
+			textSize(25);
+			text("B1", 440-3,300+10)
+		
+			image(lay3, 200,498,160,200);
+		
+		}
+	}
+	
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
